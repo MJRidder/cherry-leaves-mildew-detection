@@ -1,4 +1,108 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Client requirements
+
+<details>
+    <summary><strong>Business case assessment</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Ask</th>
+                <th>Requirements</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. What are the business requirements?</td>
+                <td>
+                - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
+                - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>2. Is there any business requirement that can be answered with conventional data analysis?</td>
+                <td>
+                - Yes, we can use conventional data analysis to conduct a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>3. Does the client need a dashboard or an API endpoint?</td>
+                <td>- The client needs a dashboard.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>4. What does the client consider as a successful project outcome?</td>
+                <td>
+                - A study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
+                - Also, the capability to predict if a cherry leaf is healthy or contains powdery mildew.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>5. Can you break down the project into Epics and User Stories?</td>
+                <td>
+                - Information gathering and data collection.
+                - Data visualization, cleaning, and preparation.
+                - Model training, optimization and validation.
+                - Dashboard planning, designing, and development.
+                - Dashboard deployment and release.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>6. Ethical or Privacy concerns?</td>
+                <td>
+                - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>7. Does the data suggest a particular model?</td>
+                <td>
+                - The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>8. What are the model's inputs and intended outputs?</td>
+                <td>
+                - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>9. What are the criteria for the performance goal of the predictions?</td>
+                <td>- We agreed with the client a degree of 97% accuracy.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>10. How will the client benefit?</td>
+                <td>- The client will not supply the market with a product of compromised quality.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</details>
 
 ## Template Instructions
 
