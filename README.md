@@ -199,6 +199,9 @@
     </table>
 </details>
 
+# Bugs / Fixes
+After collecting the data and visualizing the data, I ran into a 'bug' that I could not seem to fix in the beginning. When I ran the model, the epochs would end after 4 or 5 runs. After trying to update the criteria I also received the error that the tensorflow packages might have been incorrectly installed.
+
 ## Template Instructions
 
 Welcome,
