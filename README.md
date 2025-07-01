@@ -49,10 +49,10 @@
             <tr>
                 <td>5. Can you break down the project into Epics and User Stories?</td>
                 <td>
-                - Information gathering and data collection.
-                - Data visualization, cleaning, and preparation.
-                - Model training, optimization and validation.
-                - Dashboard planning, designing, and development.
+                - Information gathering and data collection.<br>
+                - Data visualization, cleaning, and preparation.<br>
+                - Model training, optimization and validation.<br>
+                - Dashboard planning, designing, and development.<br>
                 - Dashboard deployment and release.
                 </td>
                 <td>
