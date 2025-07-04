@@ -202,6 +202,11 @@
 # Bugs / Fixes
 * After collecting the data and visualizing the data, I ran into a 'bug' that I could not seem to fix in the beginning. When I ran the model, the epochs would end after 4 or 5 runs. After trying to update the criteria I also received the error that the tensorflow packages might have been incorrectly installed.
 * The original CNN model was overfitted, so I halved the filters in the second layer of the model from 64 to 32. This helped the model become more accurate. However loss and val_accuracy were still nog fully in line, although the estimated accuracy of the model to determine the right class was 99.99998%. So I was unclear on if I should reset the model again to get a better aligned performance between loss and val_accuracy, as it still seemed over fitted. In which case I should try out different combinations with the hyperparameters.
+  * metrics tried: Adam / Adagrad / RMSprop
+  * Loss tried : binary_crossentropy / categorical_crossentropy
+  * v1 - binary_crossentropy + Adam : 99%+ acc. 11 epochs
+  * v3 - binary_crossentropy + Adagrad :90%+ acc. 29 epochs
+  * v4 - categorical_crossentropy + Adam: 4 epochs
 * Somewhere in the modelling the definition of 0 = healthy and 1 = powdery_mildew got reversed.
 
 ## Template Instructions
