@@ -1,117 +1,6 @@
+![Banner](/images/readme/readme-cherry-leaves-banner.png)
 
-
-<details>
-    <summary><strong>Project Considerations</strong></summary>
-    <table>
-        <thead>
-            <tr>
-                <th>Business Requirements</th>
-                <th>Requirements</th>
-                <th>Pass/Fail</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>BR 1</td>
-                <td>
-                Your study should include at least analysis on:<br>
-                - average images and variability images for each class (healthy or powdery mildew),<br>
-                - the differences between average healthy and average powdery mildew cherry leaves,<br>
-                - an image montage for each class.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>BR 2</td>
-                <td>
-                - You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.<br><br>
-                - You will notice when exploring the dataset that the images are 256 pixels × 256 pixels. When defining your image shape to load the images to memory for training the model, you may choose 256 × 256 as your image shape. However, that will lead to a trained model that will likely be larger than 100Mb. This is fine as long as the model meets the project requirement, the caveat is that you may need to use Git LFS (Large File Storage) to push files larger than 100Mb to GitHub. As a result, we suggest you consider using an image shape that is smaller, like 100 × 100 or 50 × 50, with the expectation that the model would still meet the performance requirement and will be smaller than 100Mb for a smoother push to GitHub.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</details>
-
-<details>
-    <summary><strong>Dashboard Expectations</strong></summary>
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Expectation</th>
-                <th>Pass/Fail</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td>
-                A project summary page, showing the project dataset summary and the client's requirements.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>
-                A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>A page containing:<br>
-                -  A link to download a set of cherry leaf images for live prediction (you may use the Kaggle repository that was provided to you).<br>
-                - A User Interface with a file uploader widget. The user should have the capacity to upload multiple images. For each image, it will display the image and a prediction statement, indicating if a cherry leaf is healthy or contains powdery mildew and the probability associated with this statement.<br>
-                - A table with the image name and prediction results, and a download button to download the table.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>4. </td>
-                <td>A page indicating your project hypothesis and how you validated it across the project.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>5.</td>
-                <td>A technical page displaying your model performance.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</details>
-
-# Bugs / Fixes
-* After collecting the data and visualizing the data, I ran into a 'bug' that I could not seem to fix in the beginning. When I ran the model, the epochs would end after 4 or 5 runs. After trying to update the criteria I also received the error that the tensorflow packages might have been incorrectly installed.
-* The original CNN model was overfitted, so I halved the filters in the second layer of the model from 64 to 32. This helped the model become more accurate. However loss and val_accuracy were still nog fully in line, although the estimated accuracy of the model to determine the right class was 99.99998%. So I was unclear on if I should reset the model again to get a better aligned performance between loss and val_accuracy, as it still seemed over fitted. In which case I should try out different combinations with the hyperparameters.
-  * metrics tried: Adam / Adagrad / RMSprop
-  * Loss tried : binary_crossentropy / categorical_crossentropy
-  * v1 - binary_crossentropy + Adam : 99%+ acc. 11 epochs
-  * v3 - binary_crossentropy + Adagrad :90%+ acc. 29 epochs
-  * v4 - categorical_crossentropy + Adam: 4 epochs
-* Somewhere in the modelling the definition of 0 = healthy and 1 = powdery_mildew got reversed.
-
-# Dashboard planning
-
-Page 1. - Project summary <br>
-Page 2. - Study findings determining healthy leaves and leaves with powdery_mildew <br>
-Page 3. - Predictor tool with capabilities of using existing images or images uploaded by user <br>
-Page 4. - Project hypothesis and validation <br>
-Page 5. - Technical page showing model performance <br>
+# Mildew detection tool for cherry leaves
 
 ## Dataset Content
 
@@ -338,3 +227,121 @@ Model evaluation result
 ## Acknowledgements (optional)
 
 - Thank the people who provided support throughout this project.
+
+
+# NOTES
+
+
+
+<details>
+    <summary><strong>Project Considerations</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Business Requirements</th>
+                <th>Requirements</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BR 1</td>
+                <td>
+                Your study should include at least analysis on:<br>
+                - average images and variability images for each class (healthy or powdery mildew),<br>
+                - the differences between average healthy and average powdery mildew cherry leaves,<br>
+                - an image montage for each class.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>BR 2</td>
+                <td>
+                - You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.<br><br>
+                - You will notice when exploring the dataset that the images are 256 pixels × 256 pixels. When defining your image shape to load the images to memory for training the model, you may choose 256 × 256 as your image shape. However, that will lead to a trained model that will likely be larger than 100Mb. This is fine as long as the model meets the project requirement, the caveat is that you may need to use Git LFS (Large File Storage) to push files larger than 100Mb to GitHub. As a result, we suggest you consider using an image shape that is smaller, like 100 × 100 or 50 × 50, with the expectation that the model would still meet the performance requirement and will be smaller than 100Mb for a smoother push to GitHub.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+<details>
+    <summary><strong>Dashboard Expectations</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Expectation</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>
+                A project summary page, showing the project dataset summary and the client's requirements.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>
+                A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>A page containing:<br>
+                -  A link to download a set of cherry leaf images for live prediction (you may use the Kaggle repository that was provided to you).<br>
+                - A User Interface with a file uploader widget. The user should have the capacity to upload multiple images. For each image, it will display the image and a prediction statement, indicating if a cherry leaf is healthy or contains powdery mildew and the probability associated with this statement.<br>
+                - A table with the image name and prediction results, and a download button to download the table.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>4. </td>
+                <td>A page indicating your project hypothesis and how you validated it across the project.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>A technical page displaying your model performance.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+# Bugs / Fixes
+* After collecting the data and visualizing the data, I ran into a 'bug' that I could not seem to fix in the beginning. When I ran the model, the epochs would end after 4 or 5 runs. After trying to update the criteria I also received the error that the tensorflow packages might have been incorrectly installed.
+* The original CNN model was overfitted, so I halved the filters in the second layer of the model from 64 to 32. This helped the model become more accurate. However loss and val_accuracy were still nog fully in line, although the estimated accuracy of the model to determine the right class was 99.99998%. So I was unclear on if I should reset the model again to get a better aligned performance between loss and val_accuracy, as it still seemed over fitted. In which case I should try out different combinations with the hyperparameters.
+  * metrics tried: Adam / Adagrad / RMSprop
+  * Loss tried : binary_crossentropy / categorical_crossentropy
+  * v1 - binary_crossentropy + Adam : 99%+ acc. 11 epochs
+  * v3 - binary_crossentropy + Adagrad :90%+ acc. 29 epochs
+  * v4 - categorical_crossentropy + Adam: 4 epochs
+* Somewhere in the modelling the definition of 0 = healthy and 1 = powdery_mildew got reversed.
+
+# Dashboard planning
+
+Page 1. - Project summary <br>
+Page 2. - Study findings determining healthy leaves and leaves with powdery_mildew <br>
+Page 3. - Predictor tool with capabilities of using existing images or images uploaded by user <br>
+Page 4. - Project hypothesis and validation <br>
+Page 5. - Technical page showing model performance <br>

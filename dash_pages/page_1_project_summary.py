@@ -1,8 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-print("This is the page for project summary")
-
 def project_summary_body():
 
     st.write("### Project Summary")

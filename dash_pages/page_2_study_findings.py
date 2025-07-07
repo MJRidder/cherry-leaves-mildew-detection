@@ -12,9 +12,18 @@ import random
 def study_findings():
     st.write("### Leaf Visualizer")
     st.info(
-        f"* The client is interested in conducting a study to visually differentiate "
+        f"**ASK:** Provide the insights to visually differentiate "
         f"a cherry leaf that is healthy from one that contains powdery mildew.\n")
     
+    st.success("The first business requirement was to establish a visual difference "
+               "between a healthy leaf and one that contains powdery mildew. To put "
+               "this into practices, 4208 images were collected and reviewed, 50% "
+               "of which were confirmed healthy leaves and 50% of which contained "
+               "powdery mildew.\n\n"
+               "Data analysis has been carried out based on these images to determine "
+               "the difference between average and variability images, as well as "
+               "to create a montage.")
+
     version = 'v1'
     if st.checkbox("Difference between average and variability image"):
       
@@ -22,9 +31,11 @@ def study_findings():
       avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
 
       st.warning(
-        f"* We notice the average and variability images did not show "
-        f"patterns where we could intuitively differentiate one from another. " 
-        f"However, a small difference in the colour pigment of the average images is seen for both labels.")
+        "* Healthy leaves are of a consistant and brighter green color, with strong "
+        "lines and texture.\n"
+        "* Leaves with mildew do not have a consistant green color (irregular), have "
+        "unclear lines and have visually white collored textures, covering the leaves. "
+        "This is also more prudent in the veins of the leaves.")
 
       st.image(avg_healthy, caption='Healthy leaf - Average and Variability')
       st.image(avg_powdery_mildew, caption='Leaf with powdery mildew - Average and Variability')
@@ -55,11 +66,9 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
   sns.set_style("white")
   labels = os.listdir(dir_path)
 
-  # subset the class you are interested to display
+  # subset the class
   if label_to_display in labels:
 
-    # checks if your montage space is greater than subset size
-    # how many images in that folder
     images_list = os.listdir(dir_path+'/'+ label_to_display)
     if nrows * ncols < len(images_list):
       img_idx = random.sample(images_list, nrows * ncols)
@@ -89,7 +98,6 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
     plt.tight_layout()
     
     st.pyplot(fig=fig)
-    # plt.show()
 
 
   else:
