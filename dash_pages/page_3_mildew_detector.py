@@ -29,7 +29,7 @@ def page_mildew_detector_body():
    
     if images_buffer is not None:
         df_report = pd.DataFrame([])
-        for image in images_buffer:
+        for idx, image in enumerate(images_buffer):
 
             img_pil = (Image.open(image))
             st.info(f"Cherry leave: **{image.name}**")
@@ -39,7 +39,7 @@ def page_mildew_detector_body():
             version = 'v1'
             resized_img = resize_input_image(img=img_pil, version=version)
             pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
-            plot_predictions_probabilities(pred_proba, pred_class)
+            plot_predictions_probabilities(pred_proba, pred_class, key=idx)
 
             df_report = df_report._append({"Name":image.name, 'Result': pred_class },
                                         ignore_index=True)

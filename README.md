@@ -2,6 +2,25 @@
 
 # Mildew detection tool for cherry leaves
 
+# Introduction
+
+### Deployed version at https://cherry-leaves-mildew-detection.onrender.com/
+
+
+# Table of Contents
+  - [Dataset Content](#dataset-content)
+Business Requirements
+Hypothesis and validation
+Rationale for the model
+Implementation of the Business Requirements
+ML Business case
+Dashboard design
+Unfixed Bugs
+Deployment
+Technologies used
+Testing
+Credits
+
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.

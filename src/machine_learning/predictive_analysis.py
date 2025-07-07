@@ -7,7 +7,7 @@ from PIL import Image
 from src.data_management import load_pkl_file
 
 
-def plot_predictions_probabilities(pred_proba, pred_class):
+def plot_predictions_probabilities(pred_proba, pred_class, key=None):
     """
     Plot prediction probability results for leaves that are healthy 
     or contain powdery mildew.
@@ -31,7 +31,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         y=prob_per_class['Probability'],
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, key=key)
 
 
 def resize_input_image(img, version):
