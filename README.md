@@ -1,108 +1,4 @@
-# Business requirements
 
-<details>
-    <summary><strong>Business case assessment</strong></summary>
-    <table>
-        <thead>
-            <tr>
-                <th>Ask</th>
-                <th>Requirements</th>
-                <th>Pass/Fail</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1. What are the business requirements?</td>
-                <td>
-                - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
-                - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>2. Is there any business requirement that can be answered with conventional data analysis?</td>
-                <td>
-                - Yes, we can use conventional data analysis to conduct a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>3. Does the client need a dashboard or an API endpoint?</td>
-                <td>- The client needs a dashboard.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>4. What does the client consider as a successful project outcome?</td>
-                <td>
-                - A study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
-                - Also, the capability to predict if a cherry leaf is healthy or contains powdery mildew.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>5. Can you break down the project into Epics and User Stories?</td>
-                <td>
-                - Information gathering and data collection.<br>
-                - Data visualization, cleaning, and preparation.<br>
-                - Model training, optimization and validation.<br>
-                - Dashboard planning, designing, and development.<br>
-                - Dashboard deployment and release.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>6. Ethical or Privacy concerns?</td>
-                <td>
-                - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>7. Does the data suggest a particular model?</td>
-                <td>
-                - The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>8. What are the model's inputs and intended outputs?</td>
-                <td>
-                - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>9. What are the criteria for the performance goal of the predictions?</td>
-                <td>- We agreed with the client a degree of 97% accuracy.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>10. How will the client benefit?</td>
-                <td>- The client will not supply the market with a product of compromised quality.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</details>
 
 <details>
     <summary><strong>Project Considerations</strong></summary>
@@ -209,43 +105,13 @@
   * v4 - categorical_crossentropy + Adam: 4 epochs
 * Somewhere in the modelling the definition of 0 = healthy and 1 = powdery_mildew got reversed.
 
-## Template Instructions
+# Dashboard planning
 
-Welcome,
-
-This is the Code Institute student template for the Cherry Leaves project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. In your newly created repo click on the green Code button.
-
-1. Then, from the Codespaces tab, click Create codespace on main.
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and `pip3 install -r requirements.txt`
-
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
-
-1. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.12.1 as it inherits from the workspace, so it will be Python-3.12.1 as installed by Codespaces. To confirm this, you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, then you can create a new one with _Regenerate API Key_.
+Page 1. - Project summary <br>
+Page 2. - Study findings determining healthy leaves and leaves with powdery_mildew <br>
+Page 3. - Predictor tool with capabilities of using existing images or images uploaded by user <br>
+Page 4. - Project hypothesis and validation <br>
+Page 5. - Technical page showing model performance <br>
 
 ## Dataset Content
 
@@ -261,22 +127,174 @@ To save time in this process, the IT team suggested an ML system that detects in
 - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
-## Hypothesis and how to validate?
-
-- List here your project hypothesis(es) and how you envision validating it (them).
-
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
-
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+### Business Case understanding and ML validation
+<details>
+    <summary><strong>Business case assessment</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Ask</th>
+                <th>Requirements</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. What are the business requirements?</td>
+                <td>
+                - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
+                - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>2. Is there any business requirement that can be answered with conventional data analysis?</td>
+                <td>
+                - Yes, we can use conventional data analysis to conduct a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>3. Does the client need a dashboard or an API endpoint?</td>
+                <td>- The client needs a dashboard.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>4. What does the client consider as a successful project outcome?</td>
+                <td>
+                - A study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
+                - Also, the capability to predict if a cherry leaf is healthy or contains powdery mildew.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>5. Can you break down the project into Epics and User Stories?</td>
+                <td>
+                - Information gathering and data collection.<br>
+                - Data visualization, cleaning, and preparation.<br>
+                - Model training, optimization and validation.<br>
+                - Dashboard planning, designing, and development.<br>
+                - Dashboard deployment and release.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>6. Ethical or Privacy concerns?</td>
+                <td>
+                - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>7. Does the data suggest a particular model?</td>
+                <td>
+                - The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>8. What are the model's inputs and intended outputs?</td>
+                <td>
+                - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>9. What are the criteria for the performance goal of the predictions?</td>
+                <td>- We agreed with the client a degree of 97% accuracy.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>10. How will the client benefit?</td>
+                <td>- The client will not supply the market with a product of compromised quality.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</details>
 
 ## ML Business Case
+**In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.**
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+## Hypothesis and how to validate?
+
+**Hypothesis 1:**
+It is visibly possible to differintiate a healthy leave, from a leave containing powdery mildew.
+
+Valitation:
+review images and determine whether there are specific indicators that can be viewed, determining if a leave is healthy or containing powdery mildew.
+
+**Hypothesis 2**
+Based on visible indicators, it can be predicted with a 97% accuracy if a leave is healthy, or containing powdery mildew.
+
+Valitation:
+A CNN model will be trained, tested and used on a validation set of images to determine if this is possible.
+
+**Hypothesis 3**
+By using a trained CNN model, time spend & costs for cherry leaves health checks can be drastically reduced.
+
+Validation:
+Taking in account the time/cost needed to make pictures, upload them and have the CNN model run over them, a comparison can be made between these actions and the 30 minutes per tree that it costs today to verify if a Cherry tree is healthy, or infected with Mildew.
+
+## The rationale to map the business requirements to the Data Visualisations and ML tasks
+**List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.**
 
 ## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+**List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.**
+**Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).**
+
+Page 1: Project Summary
+Quick project summary
+**General Information**
+ABC
+
+**Project Dataset**
+The available dataset contains ...
+
+Link to additional information (Readme file)
+Business requirements
+- ABC
+- DEF
+
+Page 2: Cells Visualizer
+It will answer business requirements 1
+Checkbox 1 - Difference between average and variability image <br>
+Checkbox 2 - Differences between average parasitised and average uninfected cells <br>
+Checkbox 3 - Image Montage <br>
+
+Page 3: Malaria Detection
+Business requirement two information - "The client is interested in telling whether a given cell contains malaria parasite or not."
+Link to download a set of parasite-contained and uninfected cell images for live prediction.
+Create a user interface with a file uploader widget. The user should upload multiple malaria cell images. It will display the image and a prediction statement, indicating if the cell is infected or not with malaria and the probability associated with this statement.
+Table with the image name and prediction results.
+Download button to download table.
+
+Page 4: Project Hypothesis and Validation
+Block for each project hypothesis, describe the conclusion and how you validated it.
+Page 5: ML Prediction Metrics
+Label Frequencies for Train, Validation, and Test Sets
+Model History - Accuracy and Losses
+Model evaluation result
 
 ## Unfixed Bugs
 
