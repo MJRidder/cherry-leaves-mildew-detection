@@ -7,7 +7,7 @@ from PIL import Image
 from src.data_management import load_pkl_file
 
 
-def plot_predictions_probabilities(pred_proba, pred_class, key=None):
+def plot_predictions_proba(pred_proba, pred_class, key=None):
     """
     Plot prediction probability results for leaves that are healthy 
     or contain powdery mildew.
