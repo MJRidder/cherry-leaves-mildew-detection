@@ -22,12 +22,16 @@ To save time in this process, the IT team suggested an ML system that detects in
   - [Implementation of the Business Requirements](#implementation-of-the-business-requirements)
   - [ML Business case](#ml-business-case)
   - [Dashboard design](#dashboard-design)
-  - [Unfixed Bugs](#unfixed-bugs)
+  - [(Un)fixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
     - [Render](#render)
+    - [](#)
+    - [Making a local clone](#making-a-local-clone)
   - [Technologies used](#technologies-used)
     - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
   - [Testing](#testing)
+    - [Manual testing](#manual-testing)
+    - [PEP](#pep)
   - [Credits](#credits)
     - [Content](#content)
     - [Media](#media)
@@ -206,6 +210,8 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
 
 ## Dashboard design
 
+The dashboard was created using the Streamlit framework. The dashboard contains 5 pages which provides the client access to all relevant data. The dashboard answers the question for all business requirements, all in one place.
+
 <details>
     <summary><strong>Dashboard Expectations</strong></summary>
     <table>
@@ -213,7 +219,6 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
             <tr>
                 <th></th>
                 <th>Expectation</th>
-                <th>Pass/Fail</th>
             </tr>
         </thead>
         <tbody>
@@ -222,17 +227,11 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
                 <td>
                 A project summary page, showing the project dataset summary and the client's requirements.
                 </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
             </tr>
             <tr>
                 <td>2.</td>
                 <td>
                 A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
                 </td>
             </tr>
             <tr>
@@ -242,74 +241,55 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
                 - A User Interface with a file uploader widget. The user should have the capacity to upload multiple images. For each image, it will display the image and a prediction statement, indicating if a cherry leaf is healthy or contains powdery mildew and the probability associated with this statement.<br>
                 - A table with the image name and prediction results, and a download button to download the table.
                 </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
             </tr>
             <tr>
                 <td>4. </td>
                 <td>A page indicating your project hypothesis and how you validated it across the project.</td>
                 <td>
-                <!-- &#10003; -->
-                </td>
             </tr>
             <tr>
                 <td>5.</td>
                 <td>A technical page displaying your model performance.</td>
                 <td>
-                <!-- &#10003; -->
-                </td>
             </tr>
         </tbody>
     </table>
 </details>
 
-Page 1. - Project summary <br>
-Page 2. - Study findings determining healthy leaves and leaves with powdery_mildew <br>
-Page 3. - Predictor tool with capabilities of using existing images or images uploaded by user <br>
-Page 4. - Project hypothesis and validation <br>
-Page 5. - Technical page showing model performance <br>
+**Page 1. - Project summary**
+The Project summary page provides general information about the mildew fungus and how it can be recognized on leaves when compared with healthy leaves. It gives information on the data that was used for the machine learning tool and states the two business requirements that this dashboard provides answers to. This page provides in writing part of the answer to Business Requirement 1: How to visually see the differences between a healthy leaf and a leaf with powdery mildew.
 
-**List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.**
-**Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).**
+**Page 2. - Leaves visualizer**
+The Leaves page provides a visual image montage, answering Business Requirement 1: How to visually see the differences between a healthy leaf and a leaf with powdery mildew. After the page intro this is split into three sections that can be activated by clicking the checkboxes:
 
-Page 1: Project Summary
-Quick project summary
-**General Information**
-ABC
+*1. Difference between average and variability image*
+The client can see the average and variability for the images of healthy and infected leaves.
 
-**Project Dataset**
-The available dataset contains ...
+*2. Differences between an average leaf that is healthy from one that contains powdery mildew*
+Compare the differences between an average leaf that is healthy from one that contains powdery mildew
 
-Link to additional information (Readme file)
-Business requirements
-- ABC
-- DEF
+*3. Image Montage*
+Provides the user with the ability to see a montage of 24 images of either healthy images, or images containing powdery mildew.
 
-Page 2: Cells Visualizer
-It will answer business requirements 1
-Checkbox 1 - Difference between average and variability image <br>
-Checkbox 2 - Differences between average parasitised and average uninfected cells <br>
-Checkbox 3 - Image Montage <br>
+**Page 3. - Mildew detector**
+Predictor tool with capabilities of predicing for a single image, or mutiple whether the leaves on the images are healthy or infected. It also provides a link to the original Kaggle set to showcase, so that images from the original set can also be tested.
 
-Page 3: Malaria Detection
-Business requirement two information - "The client is interested in telling whether a given cell contains malaria parasite or not."
-Link to download a set of parasite-contained and uninfected cell images for live prediction.
-Create a user interface with a file uploader widget. The user should upload multiple malaria cell images. It will display the image and a prediction statement, indicating if the cell is infected or not with malaria and the probability associated with this statement.
-Table with the image name and prediction results.
-Download button to download table.
+When images are uploaded, the result provided is a quick visual of the uploaded image and a confirmation on if it's indeed a healthy leaf or if it is a leaf containing powdery mildew. It will also provide the probability of this prediciton in graph format.
 
-Page 4: Project Hypothesis and Validation
-Block for each project hypothesis, describe the conclusion and how you validated it.
-Page 5: ML Prediction Metrics
-Label Frequencies for Train, Validation, and Test Sets
-Model History - Accuracy and Losses
-Model evaluation result
+**Page 4. - Project hypothesis and validation**
+This page contains information on the initial hypothesis, the way this hypothesis would be validated and the result of this validation.
+
+**Page 5. - Technical page showing model performance**
+- Train, Validation and Test Set: Labels Frequencies
+- Model history
+- Performance on test set
+- Confusion matrix
 
 [Back to top ⇧](#table-of-contents)
 
-## Unfixed Bugs
+## (Un)fixed Bugs
 
+* When building the dashboard page for the "Mildew detector", it worked when uploading a single image. However, when uploading multiple images, a StreamlitDuplicateElementId error occured. Essentially stating that the graphs that I was trying to add needed to have a unique ID. I added a unique ID to the "plotly graphs" which creating the graphs, but I forgot to add the ID creation as well to the for loop of the graph generator, on the Mildew detector app page.
 * After collecting the data and visualizing the data, I ran into a 'bug' that I could not seem to fix in the beginning. When I ran the model, the epochs would end after 4 or 5 runs. After trying to update the criteria I also received the error that the tensorflow packages might have been incorrectly installed.
 * The original CNN model was overfitted, so I halved the filters in the second layer of the model from 64 to 32. This helped the model become more accurate. However loss and val_accuracy were still nog fully in line, although the estimated accuracy of the model to determine the right class was 99.99998%. So I was unclear on if I should reset the model again to get a better aligned performance between loss and val_accuracy, as it still seemed over fitted. In which case I should try out different combinations with the hyperparameters.
   * metrics tried: Adam / Adagrad / RMSprop
@@ -325,39 +305,147 @@ Model evaluation result
 
 ### Render
 
-- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
-- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-- The project was deployed to Heroku using the following steps.
+- The App live link is: `https://cherry-leaves-mildew-detection.onrender.com/`
+- The project was deployed to Render using the following [Guide](https://code-institute-students.github.io/deployment-docs/42-pp5-pa/) .
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
+1. If using the CI P5 project (if not, skip this step), prepare your codespace by:
+   - Delete Procfile
+   - Delete runtime.txt
+   - Add, commit, and push your changes to GitHub
+2. Log in to Render and click the "+ Add New" button
+3. Click "Web Services" in the following drop down
+4. Search for relevant repo from Github and click “Connect”
+5. Give a name to your project
+6. Ensure the settings of the project as as follows:
+   - Setting Name: Value
+   - Root Directory: blank
+   - Environment: Python 3
+   - Region: Frankfurt (EU Central), For those outside of Europe, a more localized region may be preferred
+   - Branch: main
+7. Set the Build Command to: " pip install -r requirements.txt "
+8. Set the Start Command to: " streamlit run app.py "
+9. Select desired payment plan (if needed, depending on size)
+10. Scroll down and click “Advanced”
+11. Click “Add Environment Variable”
+12. Add a key: PORT and a value: 8501
+13. Add a second environment variable with a key: PYTHON_VERSION and value: 3.12.1
+14. Click “Create Web Service”
+15. Wait for deployment… (Watch the console for some activity, deployment can take up to 15 minutes to complete)
+16. Deployment completed!
+17. Open the deployed site via the link below the WEB SERVICE name
+18. Run your program to check that it all works as expected. Render can be slow for Predictive Analytics projects, so be patient
+
+### 
+- Below are the steps to fork the repository:
+  - Locate the GitHub Repository of this project and log into your GitHub account.
+  - Click on the "Fork" button, on the top right of the page, just above the "Settings".
+  - Then locate 'Create Fork' below the page and click on it.
+  - You now have a copy of the original repository in your GitHub account.
+
+### Making a local clone
+- Below are the steps to clone a repository:
+  - On the page for the repository, click the 'Code' button
+  - To clone the repository using HTTPS, copy the HTTPS URL provided there
+  - Open your CLI application of choice and change the current working directory to the location where you want the cloned directory to be made.
+  - Type git clone, and then paste the previously copied URL to create the clone
 
 [Back to top ⇧](#table-of-contents)
 
 ## Technologies used
 
+| Technology | Use
+| --- | ---
+| [Github](https://github.com/j) | To store the project code after being pushed from Codespaces
+| [Jupyter Notebook](https://jupyter.org/) | Dataset and model management
+| [Render](https://render.com/) | Tool hosting
+| [Kaggle](https://www.kaggle.com/) | Image hosting
+| [ChatGPT](https://openai.com/index/chatgpt/) | Support
+
+
 [Back to top ⇧](#table-of-contents)
 
 ### Main Data Analysis and Machine Learning Libraries
 
-- Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+| Libraries | Use
+| --- | ---
+| numpy==1.26.1 | to work with data in arrays
+| pandas==2.1.1 | for data manipulation and analysis
+| matplotlib==3.8.0 | for data visualisation
+| seaborn==0.13.2 | for data visualisation
+| streamlit==1.40.2 | for the app interface deployed on Heroku
+| scikit-learn==1.3.1 | for predictive analysis
+| tensorflow-cpu==2.16.1 | for model training
+| keras>=3.0.0 | for setting model's hyperparameters
+| plotly==5.17.0 | plotting the model's learning curve and diagnostic graphs
+| tensorflow-cpu==2.16.1 | for model training
+| kaggle==1.5.12 | Image importation
+
 
 [Back to top ⇧](#table-of-contents)
 
 ## Testing
 
-Instert a testing block.
+### Manual testing
+
+**1. Information gathering and data collection.**
+  - As a client I gather images and store them in one place so that they can be easily downloaded.
+      - AC 1 - Images can be uploaded and downloaded from Kaggle.
+
+  - As the developer I can use all provided images without concern so that the ML tool can use it for training.
+      - AC 1 - All images in dataset are functioning.
+      - AC 2 - All images in dataset are the correct/same size.
+      - AC 3 - ML tool responds to all images correctly.
+
+**2. Data visualization, cleaning, and preparation.**
+  - As a client I can visually differentiate between healthy and infected leaves so that I understand the difference.
+      - AC 1 - Clear visual guidance is provided whether a leaf is healty of infected.
+      - AC 2 - There is a montage available to see the differences between healthy and infected leaves.
+  
+  - As a developer I have a clear dataset of images so that I can train the ML tool.
+      - AC 1 - Image dataset is large enough to split into train, test, validation.
+      - AC 2 - I can determine the image average and variability for each class (healthy and infected).
+
+**3. Model training, optimization and validation.**
+  - As a developer I can use the provided dataset to train the CNN model.
+      - AC 1 - The data set has clear labels for its classes.
+      - AC 2 - the image shape for that images is correctly determined.
+      - AC 3 - Image dataset is large enough to split into train, test, validation.
+      - AC 4 - Image augmentation is possible to increase training data for the CNN model.
+    
+  - As a developer I have the space/time to trial different settings so that the highest success can be obtained.
+      - AC 1 - Time is made available to train the model.
+      - AC 2 - Different "loss functions", Optimizers and "activation functions" can be tested.
+
+**4. Dashboard planning, designing, and development.**
+  - As a client I can define what I find relevant information so that the dashboard fits my needs.
+      - AC 1 - Dashboard contains study information on the visual cues between healthy infected leaves.
+      - AC 2 - It is possible for the clients IT team to understand how the model worked.
+      - AC 3 - Client has been able to provide their priorities for the dashboard.
+      - AC 4 - Client is able to upload images of leaves that they want to have tested and receive immediate feedback.
+      - AC 5 - It is clear for the client what can be found on the dashboard.
+      - AC 6 - When predictions on leaf healthy are made, the client can see that the degree of accuracy is >97%.
+     
+  - As a developer I can provide context on what is possible in the dashboard so that I can match the clients expectations.
+      - AC 1 - Developer has been part of the dashboard conversations.
+      - AC 2 - Developer has been made aware of clients needs/priorities.
+
+**5. Dashboard deployment and release.**
+   - As a client I have easy access to the dashboard so that it can be used without challenge.
+     - AC 1 - An easy to use platform has been chosen to host the platform.
+     - AC 2 - Platform is avaiable in the browser for easy/quick access. 
+   
+   - As a developer I can update the dashboard after deployment so that I can ensure it remains up to date.
+     - AC 1 - chosen platform should be available also after deployment.
+     - AC 2 - changes can me made/prepared without it directly impacting deployment, only when chosen to do so.
 
 [Back to top ⇧](#table-of-contents)
 
+### PEP8 Python code validation
+
+
 ## Credits
 
-- In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
+
 
 ### Content
 

@@ -25,12 +25,6 @@ def project_summary_body():
         f"2104 images.\n"
         f"* The images are of cherry leaves, taken in various conditions, and are "
         f"stored in a folder structure that separates the two classes.\n")
-        
-
-    st.write(
-        f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")
-    
 
     st.success(
         f"The project has 2 business requirements:\n"
@@ -38,3 +32,7 @@ def project_summary_body():
         f"a cherry leaf that is healthy from one that contains powdery mildew.\n"
         f"* The client is interested in predicting if a cherry leaf is healthy or "
         f"contains powdery mildew.")
+    
+    st.write(
+        f"* For additional information, please visit and **read** the "
+        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")

@@ -34,10 +34,12 @@ def page_ml_performance_metrics():
     "The model was trained various times with different combinations of with loss functions and "
     "optimizers. Finally getting the best results with the following settings:\n"
     "- Loss: binary_crossentropy\n"
-    "- Optimizer: Adam\n\n"
-    "Other settings that were reviewed:\n"
+    "- Optimizer: Adam\n"
+    "- Activation function: relu & sigmoid\n\n"
+    "Other settings that were reviewed, but did not provide better results:\n"
     "- *Loss functions:* categorical_crossentropy\n"
     "- *Optimizers:* Adagrad, RMSprop, Adelta\n"
+    "- *Activation functions:* Softmax\n"
     )
     st.write("---")
 
@@ -47,7 +49,7 @@ def page_ml_performance_metrics():
     "The model shows an accuracy of over 99%, which is well above the "
     "requested 97% by the client."
     )
-
+    st.write("### Confusion Matrix")
     model_clf = plt.imread(f"outputs/{version}/confusion_matrix.png")
     st.image(model_clf, caption='Classification Report')  
 

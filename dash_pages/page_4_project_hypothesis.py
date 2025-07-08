@@ -31,3 +31,7 @@ def page_project_hypothesis_body():
         f"run over them, a comparison can be made between these actions and the 30 minutes per tree "
         f"that it costs today to verify if a Cherry tree is healthy, or infected with Mildew."
         )
+    
+    st.write(
+        f"* For additional information, please visit and **read** the "
+        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")

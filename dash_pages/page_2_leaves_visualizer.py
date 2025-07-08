@@ -9,11 +9,15 @@ from matplotlib.image import imread
 import itertools
 import random
 
-def study_findings():
-    st.write("### Leaf Visualizer")
+def leaves_visualizer_body():
+    st.write("### Leaves Visualizer")
     st.info(
         f"**ASK:** Provide the insights to visually differentiate "
         f"a cherry leaf that is healthy from one that contains powdery mildew.\n")
+    
+    st.write(
+        f"* For additional information, please visit and **read** the "
+        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")
     
     st.success("The first business requirement was to establish a visual difference "
                "between a healthy leaf and one that contains powdery mildew. To put "
@@ -39,9 +43,10 @@ def study_findings():
 
       st.image(avg_healthy, caption='Healthy leaf - Average and Variability')
       st.image(avg_powdery_mildew, caption='Leaf with powdery mildew - Average and Variability')
+      
       st.write("---")
 
-    if st.checkbox("Differences between a leaf that is healthy from one that contains powdery mildew"):
+    if st.checkbox("Differences between an average leaf that is healthy and one that contains powdery mildew"):
           diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
           st.warning(
@@ -98,7 +103,6 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
     plt.tight_layout()
     
     st.pyplot(fig=fig)
-
 
   else:
     print("The label you selected doesn't exist.")

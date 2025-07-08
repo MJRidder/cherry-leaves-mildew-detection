@@ -21,6 +21,11 @@ def page_mildew_detector_body():
         f"powdery mildew for live prediction. \n"
         f"You can download the images from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves/data)."
         )
+    
+
+    st.write(
+    f"* For additional information, please visit and **read** the "
+    f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")
 
     st.write("---")
 
