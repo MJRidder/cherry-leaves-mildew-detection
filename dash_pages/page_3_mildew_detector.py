@@ -12,8 +12,10 @@ from src.machine_learning.predictive_analysis import (
 
 def page_mildew_detector_body():
     st.info(
-        f"The client is interested in predicting if a cherry leaf is healthy or "
-        f"contains powdery mildew."
+        f"The client is interested in predicting if a cherry leaf is healthy "
+        f"or contains powdery mildew. This page allows you to upload images "
+        f"of cherry leaves to have the model predict whether the leaves in "
+        f"the image are healthy or contain powdery mildew."
         )
 
     st.write(
