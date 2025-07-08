@@ -21,9 +21,6 @@ To save time in this process, the IT team suggested an ML system that detects in
   - [Rationale for ML model](#rationale-for-ml-model)
   - [Implementation of the Business Requirements](#implementation-of-the-business-requirements)
   - [ML Business case](#ml-business-case)
-    - [Business Case understanding and ML validation](#business-case-understanding-and-ml-validation)
-  - [ML Business Case](#ml-business-case-1)
-  - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
   - [Dashboard design](#dashboard-design)
   - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
@@ -35,6 +32,10 @@ To save time in this process, the IT team suggested an ML system that detects in
     - [Content](#content)
     - [Media](#media)
   - [Acknowledgements (optional)](#acknowledgements-optional)
+- [NOTES AND OTHERS](#notes-and-others)
+    - [Business Case understanding and ML validation](#business-case-understanding-and-ml-validation)
+  - [ML Business Case](#ml-business-case-1)
+  - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
 
 ## Dataset Content
 
@@ -127,38 +128,37 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
 
 ## Implementation of the Business Requirements
 
-**User stories**
-1. Information gathering and data collection.
-    - As a client I gather images and store them in one place so that they can be easily downloaded.
+**1. Information gathering and data collection.**
+  - As a client I gather images and store them in one place so that they can be easily downloaded.
       - AC 1 - Images can be uploaded and downloaded from Kaggle.
 
-    - As the developer I can use all provided images without concern so that the ML tool can use it for training.
+  - As the developer I can use all provided images without concern so that the ML tool can use it for training.
       - AC 1 - All images in dataset are functioning.
       - AC 2 - All images in dataset are the correct/same size.
       - AC 3 - ML tool responds to all images correctly.
 
-2. Data visualization, cleaning, and preparation.
-    - As a client I can visually differentiate between healthy and infected leaves so that I understand the difference.
+**2. Data visualization, cleaning, and preparation.**
+  - As a client I can visually differentiate between healthy and infected leaves so that I understand the difference.
       - AC 1 - Clear visual guidance is provided whether a leaf is healty of infected.
       - AC 2 - There is a montage available to see the differences between healthy and infected leaves.
   
-    - As a developer I have a clear dataset of images so that I can train the ML tool.
+  - As a developer I have a clear dataset of images so that I can train the ML tool.
       - AC 1 - Image dataset is large enough to split into train, test, validation.
       - AC 2 - I can determine the image average and variability for each class (healthy and infected).
 
-3. Model training, optimization and validation.
-    - As a developer I can use the provided dataset to train the CNN model.
+**3. Model training, optimization and validation.**
+  - As a developer I can use the provided dataset to train the CNN model.
       - AC 1 - The data set has clear labels for its classes.
       - AC 2 - the image shape for that images is correctly determined.
       - AC 3 - Image dataset is large enough to split into train, test, validation.
       - AC 4 - Image augmentation is possible to increase training data for the CNN model.
     
-    - As a developer I have the space/time to trial different settings so that the highest success can be obtained.
+  - As a developer I have the space/time to trial different settings so that the highest success can be obtained.
       - AC 1 - Time is made available to train the model.
       - AC 2 - Different "loss functions", Optimizers and "activation functions" can be tested.
 
-4. Dashboard planning, designing, and development.
-    - As a client I can define what I find relevant information so that the dashboard fits my needs.
+**4. Dashboard planning, designing, and development.**
+  - As a client I can define what I find relevant information so that the dashboard fits my needs.
       - AC 1 - Dashboard contains study information on the visual cues between healthy infected leaves.
       - AC 2 - It is possible for the clients IT team to understand how the model worked.
       - AC 3 - Client has been able to provide their priorities for the dashboard.
@@ -166,11 +166,11 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
       - AC 5 - It is clear for the client what can be found on the dashboard.
       - AC 6 - When predictions on leaf healthy are made, the client can see that the degree of accuracy is >97%.
      
-    - As a developer I can provide context on what is possible in the dashboard so that I can match the clients expectations.
+  - As a developer I can provide context on what is possible in the dashboard so that I can match the clients expectations.
       - AC 1 - Developer has been part of the dashboard conversations.
       - AC 2 - Developer has been made aware of clients needs/priorities.
 
-5. Dashboard deployment and release.
+**5. Dashboard deployment and release.**
    - As a client I have easy access to the dashboard so that it can be used without challenge.
      - AC 1 - An easy to use platform has been chosen to host the platform.
      - AC 2 - Platform is avaiable in the browser for easy/quick access. 
@@ -183,157 +183,26 @@ Essentially for Farmy Foods going forward is creating a reliable workflow of col
 
 ## ML Business case
 
-### Business Case understanding and ML validation
-<details>
-    <summary><strong>Business case assessment</strong></summary>
-    <table>
-        <thead>
-            <tr>
-                <th>Ask</th>
-                <th>Requirements</th>
-                <th>Pass/Fail</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1. What are the business requirements?</td>
-                <td>
-                - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
-                - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>2. Is there any business requirement that can be answered with conventional data analysis?</td>
-                <td>
-                - Yes, we can use conventional data analysis to conduct a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>3. Does the client need a dashboard or an API endpoint?</td>
-                <td>- The client needs a dashboard.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>4. What does the client consider as a successful project outcome?</td>
-                <td>
-                - A study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
-                - Also, the capability to predict if a cherry leaf is healthy or contains powdery mildew.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>5. Can you break down the project into Epics and User Stories?</td>
-                <td>
-                - Information gathering and data collection.<br>
-                - Data visualization, cleaning, and preparation.<br>
-                - Model training, optimization and validation.<br>
-                - Dashboard planning, designing, and development.<br>
-                - Dashboard deployment and release.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>6. Ethical or Privacy concerns?</td>
-                <td>
-                - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>7. Does the data suggest a particular model?</td>
-                <td>
-                - The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>8. What are the model's inputs and intended outputs?</td>
-                <td>
-                - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>9. What are the criteria for the performance goal of the predictions?</td>
-                <td>- We agreed with the client a degree of 97% accuracy.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>10. How will the client benefit?</td>
-                <td>- The client will not supply the market with a product of compromised quality.</td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</details>
+**Objective:** The issues at hand is a binary one. Provide clarity on if an image of a cherry leaves, contains a leaf that is healty, or if it contains the mildew fungus. A ML model needs to be trained that can inspect such images quickly and provide an answer immediately. 
 
-[Back to top ⇧](#table-of-contents)
+**Desired Outcome:** A model that based on a provided imagesof a cherry leaf, is able to detect/predict whether the leaf is healthy or contains the mildew fungus. The model should be quick and easy to use. It should also provide realiable outcomes.
 
-## ML Business Case
-**In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.**
+**Success Metrics:**
 
-<details>
-    <summary><strong>Project Considerations</strong></summary>
-    <table>
-        <thead>
-            <tr>
-                <th>Business Requirements</th>
-                <th>Requirements</th>
-                <th>Pass/Fail</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>BR 1</td>
-                <td>
-                Your study should include at least analysis on:<br>
-                - average images and variability images for each class (healthy or powdery mildew),<br>
-                - the differences between average healthy and average powdery mildew cherry leaves,<br>
-                - an image montage for each class.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-            <tr>
-                <td>BR 2</td>
-                <td>
-                - You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.<br><br>
-                - You will notice when exploring the dataset that the images are 256 pixels × 256 pixels. When defining your image shape to load the images to memory for training the model, you may choose 256 × 256 as your image shape. However, that will lead to a trained model that will likely be larger than 100Mb. This is fine as long as the model meets the project requirement, the caveat is that you may need to use Git LFS (Large File Storage) to push files larger than 100Mb to GitHub. As a result, we suggest you consider using an image shape that is smaller, like 100 × 100 or 50 × 50, with the expectation that the model would still meet the performance requirement and will be smaller than 100Mb for a smoother push to GitHub.
-                </td>
-                <td>
-                <!-- &#10003; -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</details>
+- *Accuracy:* The created model is required to have a degree of accuracy of at least >97%
+- *User Experience:* The created dashboard should be easy to use and provide the ability to quickly and effectively review batches of leaf images. To make it applicable in the day to day, the provided feedback should be instantaneous. 
 
-[Back to top ⇧](#table-of-contents)
+**Model Output:** The output of the model is binary. Stating that the provided image contains a leaf that is healthy, or a leaf that conatins the powdery mildew fungus. The model should also indicate how certain it is of this outcome, which it should be able to give with a degree of at least 97% certainty. The output should also easily be accesseable by the client through an online dashboard. In this same dashboard the client should be able to input new images for the model to review and download a report based on these images, stating all the images and the result according to the model.
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
-**List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.**
+**Heuristics:** The current process for determining the health of a cherry tree is done by inspecting its leaves. This takes a specialist around 30 minutes per tree. This is a timely and therefore costly process that can only be done by trained individuals. Having the ability to do this process through the ML model, based on pictures taken from the leaves. Will safe time, finances and allows for more employess to do the job, as it requires less skill. Allowing for the job to be done more frequently while it will be less dependant on human error and or the speciality of a few indivduals.
+
+**Training Data:** The training data has been provided through [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves/) and is deemed sufficient. Containing 4208 images of leaves, of which both classes (healthy and powdery mildew infected) have 2104 designated images which can be used to train the model. Images are colored (RGB) and of good quality. Also all images are of the same size (256, 256, 3).
+
+**Business Benefits:**
+
+- *Efficiency:* The trained model will be able to review many images/leaves at the same time, documenting results and allows for tracking of tree health. It does no longer require specialists to do the quality task. And answers can be provided instantly.
+- *Reliability:* Now that the model has been trained, the reliability of the model is 99%. Which gives the client almost a certain answer to the question whether a leaf is healthy or not. Especially if multiple leaves of a single tree are reviewed, it will be very clear if a tree is healthy or not. Additionally the client is no longer dependant of an employees ability/speciality of being able to determine if a leaf/tree is healthy, taking human error out of the equation almost completely.
+- *Scalability:* When an effective and reliable way can be set up to collect, document, upload and track the images/results of leaves and its related trees, this new way of working would be very scalable. The 'bottle neck' would be adapting the current way of working, to the collecting and processing of the images and finding a way of using this information in a practical manner. Allowing for the client to separate healthy from unhealthy trees and provide treatment where needed/possible. 
 
 ## Dashboard design
 
@@ -509,3 +378,159 @@ Instert a testing block.
 - Roman Rakic and the CI support team : providing answers when I was stuck and Google & ChatGPT were not able to provide an answer
 
 [Back to top ⇧](#table-of-contents)
+
+
+
+# NOTES AND OTHERS
+
+### Business Case understanding and ML validation
+<details>
+    <summary><strong>Business case assessment</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Ask</th>
+                <th>Requirements</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. What are the business requirements?</td>
+                <td>
+                - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
+                - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>2. Is there any business requirement that can be answered with conventional data analysis?</td>
+                <td>
+                - Yes, we can use conventional data analysis to conduct a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>3. Does the client need a dashboard or an API endpoint?</td>
+                <td>- The client needs a dashboard.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>4. What does the client consider as a successful project outcome?</td>
+                <td>
+                - A study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.<br>
+                - Also, the capability to predict if a cherry leaf is healthy or contains powdery mildew.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>5. Can you break down the project into Epics and User Stories?</td>
+                <td>
+                - Information gathering and data collection.<br>
+                - Data visualization, cleaning, and preparation.<br>
+                - Model training, optimization and validation.<br>
+                - Dashboard planning, designing, and development.<br>
+                - Dashboard deployment and release.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>6. Ethical or Privacy concerns?</td>
+                <td>
+                - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>7. Does the data suggest a particular model?</td>
+                <td>
+                - The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>8. What are the model's inputs and intended outputs?</td>
+                <td>
+                - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>9. What are the criteria for the performance goal of the predictions?</td>
+                <td>- We agreed with the client a degree of 97% accuracy.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>10. How will the client benefit?</td>
+                <td>- The client will not supply the market with a product of compromised quality.</td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+[Back to top ⇧](#table-of-contents)
+
+## ML Business Case
+**In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.**
+
+<details>
+    <summary><strong>Project Considerations</strong></summary>
+    <table>
+        <thead>
+            <tr>
+                <th>Business Requirements</th>
+                <th>Requirements</th>
+                <th>Pass/Fail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BR 1</td>
+                <td>
+                Your study should include at least analysis on:<br>
+                - average images and variability images for each class (healthy or powdery mildew),<br>
+                - the differences between average healthy and average powdery mildew cherry leaves,<br>
+                - an image montage for each class.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+            <tr>
+                <td>BR 2</td>
+                <td>
+                - You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.<br><br>
+                - You will notice when exploring the dataset that the images are 256 pixels × 256 pixels. When defining your image shape to load the images to memory for training the model, you may choose 256 × 256 as your image shape. However, that will lead to a trained model that will likely be larger than 100Mb. This is fine as long as the model meets the project requirement, the caveat is that you may need to use Git LFS (Large File Storage) to push files larger than 100Mb to GitHub. As a result, we suggest you consider using an image shape that is smaller, like 100 × 100 or 50 × 50, with the expectation that the model would still meet the performance requirement and will be smaller than 100Mb for a smoother push to GitHub.
+                </td>
+                <td>
+                <!-- &#10003; -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+
+[Back to top ⇧](#table-of-contents)
+
+## The rationale to map the business requirements to the Data Visualisations and ML tasks
+**List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.**
