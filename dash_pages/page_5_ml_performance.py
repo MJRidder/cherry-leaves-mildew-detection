@@ -25,10 +25,9 @@ def page_ml_performance_metrics():
     )
     st.write("---")
 
-
     st.write("### Model History")
     col1, col2 = st.columns(2)
-    with col1: 
+    with col1:
         model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
         st.image(model_acc, caption='Model Training Accuracy')
     with col2:
@@ -36,13 +35,14 @@ def page_ml_performance_metrics():
         st.image(model_loss, caption='Model Training Losses')
 
     st.warning(
-        f"The model was trained various times with different combinations of with "
-        f"loss functions and optimizers. Finally getting the best results with the "
-        f"following settings:\n"
+        f"The model was trained various times with different combinations of "
+        f"with loss functions and optimizers. Finally getting the best "
+        f"results with the following settings:\n"
         f"- Loss: binary_crossentropy\n"
         f"- Optimizer: Adam\n"
         f"- Activation function: relu & sigmoid\n\n"
-        f"Other settings that were reviewed, but did not provide better results:\n"
+        f"Other settings that were reviewed, "
+        f"but did not provide better results:\n"
         f"- *Loss functions:* categorical_crossentropy\n"
         f"- *Optimizers:* Adagrad, RMSprop, Adelta\n"
         f"- *Activation functions:* Softmax\n"
@@ -58,7 +58,7 @@ def page_ml_performance_metrics():
     )
     st.write("### Confusion Matrix")
     model_clf = plt.imread(f"outputs/{version}/confusion_matrix.png")
-    st.image(model_clf, caption='Classification Report')  
+    st.image(model_clf, caption='Classification Report')
 
     st.warning(
         f"The confusion matrix shows a good accuracy in predicting status. "

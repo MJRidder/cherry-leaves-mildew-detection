@@ -20,7 +20,7 @@ def leaves_visualizer_body():
     st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README file] "
-        f"(https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")  #noqa
+        f"(https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")  # noqa
 
     st.success(
         f"The first business requirement was to establish a "

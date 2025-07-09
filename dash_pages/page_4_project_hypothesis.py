@@ -70,4 +70,4 @@ def page_project_hypothesis_body():
 
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")  #noqa
+        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")  # noqa

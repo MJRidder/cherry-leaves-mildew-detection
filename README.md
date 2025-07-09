@@ -372,6 +372,50 @@ No remaining bugs exist in the code or on the dashboard.
 
 ### Manual testing
 
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>Action</th>
+        <th>Expected result</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>Front page intro and menu</td>
+        <td>Showcases a welcome message, intro and menu to the user</td>
+       <td><img src=Readme/feature-testing-front-page-menu.png alt="Front page and menu"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Navigation banners</td>
+        <td>Banners in YELLOW showcase the process the user is starting</td>
+       <td><img src=Readme/feature-testing-navigation-banner.png alt="Navigation banner"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Status messaging (CYAN)</td>
+        <td>Shows to the user the actions the program is taking</td>
+       <td><img src=Readme/feature-testing-positive-messaging.png alt="Status messaging"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Error messaging (RED)</td>
+        <td>Provides visual confirmation that user input was incorrect</td>
+       <td><img src=Readme/feature-testing-error-message.png alt="Error messaging"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Confirming messaging (GREEN)</td>
+        <td>Provides visual confirmation of what is available/confirmed</td>
+       <td><img src=Readme/feature-testing-positive-messaging.png alt="Confirming messaging"></td>
+        <td>Pass</td>
+    <tr>
+        <td>Booking confirmation</td>
+        <td>Provides an overview of the booking that the user made</td>
+        <td><img src=Readme/feature-testing-booking-confirmation.png alt="Booking confirmation"></td>
+        <td>Pass</td>
+    </tr>
+</table>
+
 **1. Information gathering and data collection.**
   - As a client I gather images and store them in one place so that they can be easily downloaded.
       - AC 1 - Images can be uploaded and downloaded from Kaggle.
@@ -426,6 +470,13 @@ No remaining bugs exist in the code or on the dashboard.
 [Back to top ⇧](#table-of-contents)
 
 ### PEP8 Python code validation
+
+Reviewed all .py pages for [PEP8](https://pep8ci.herokuapp.com/), all pages are now without errors. General updates that were made:
+
+- Adding/Removal of white lines
+- Updating indentations
+- Removal of white spaces after code
+- General formatting 
 
 [Back to top ⇧](#table-of-contents)
 

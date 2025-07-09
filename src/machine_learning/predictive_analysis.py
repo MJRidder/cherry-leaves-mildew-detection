@@ -9,7 +9,7 @@ from src.data_management import load_pkl_file
 
 def plot_predictions_proba(pred_proba, pred_class, key=None):
     """
-    Plot prediction probability results for leaves that are healthy 
+    Plot prediction probability results for leaves that are healthy
     or contain powdery mildew.
     """
 
@@ -50,7 +50,8 @@ def load_model_and_predict(my_image, version):
     Load and perform ML prediction over live images
     """
 
-    model = load_model(f"outputs/{version}/cherry_leaves_mildew_detector_model_v1.h5")
+    model = load_model(
+        f"outputs/{version}/cherry_leaves_mildew_detector_model_v1.h5")
 
     pred_proba = model.predict(my_image)[0, 0]
 
