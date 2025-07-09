@@ -5,11 +5,18 @@ import matplotlib.pyplot as plt
 def project_summary_body():
 
     st.write("### Project Summary")
+    st.write(
+        f"The Mildew detector project is a machine learning project that "
+        f"created a tool that can accurately classify cherry leaves as "
+        f"either healthy or infected with powdery mildew. For this it uses a "
+        f"convolutional neural network (CNN) model trained on a dataset of "
+        f"cherry leaf images."
+    )
 
     st.info(
         f"**General Information**\n\n"
-        f"Powdery mildew on cherry trees is a fungal disease characterized by"
-        f"a white, powdery coating on leaves, shoots, and sometimes fruit. It"
+        f"Powdery mildew on cherry trees is a fungal disease characterized by "
+        f"a white, powdery coating on leaves, shoots, and sometimes fruit. It "
         f"can cause leaf distortion, stunted growth, and blemishes on the "
         f"fruit. The fungus thrives in warm, humid conditions and can "
         f"overwinter on the tree or in fallen leaves.\n\n"

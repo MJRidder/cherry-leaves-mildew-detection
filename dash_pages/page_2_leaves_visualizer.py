@@ -28,7 +28,7 @@ def leaves_visualizer_body():
     st.success(
         f"The first business requirement was to establish a "
         f"visual difference between a healthy leaf and one that "
-        f"contains powdery mildew. To put this into practices, "
+        f"contains powdery mildew. To put this into practice, "
         f"4208 images were collected and reviewed, 50% of which "
         f"were confirmed healthy leaves and 50% of which contained "
         f"powdery mildew.\n\n"

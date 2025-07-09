@@ -36,8 +36,8 @@ def page_ml_performance_metrics():
 
     st.warning(
         f"The model was trained various times with different combinations of "
-        f"with loss functions and optimizers. Finally getting the best "
-        f"results with the following settings:\n"
+        f"loss functions and optimizers. Finally getting the best "
+        f"results with the following compilation:\n"
         f"- Loss: binary_crossentropy\n"
         f"- Optimizer: Adam\n"
         f"- Activation function: relu & sigmoid\n\n"
