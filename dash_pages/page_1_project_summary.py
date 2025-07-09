@@ -32,7 +32,7 @@ def project_summary_body():
         f"classes.\n")
 
     st.success(
-        f"The project has 2 business requirements:\n"
+        f"The project gives answers to the 2 main business requirements:\n"
         f"* The client is interested in conducting a study to visually "
         f"differentiate a cherry leaf that is healthy from one that contains "
         f"white powdery mildew.\n"

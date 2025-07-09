@@ -18,6 +18,10 @@ def page_mildew_detector_body():
         f"of cherry leaves to have the model predict whether the leaves in "
         f"the image are healthy or contain powdery mildew."
         )
+    
+    st.error(
+        f"This page provides answers to Business Requirement 2:\n"
+    )
 
     st.write(
         f"* You can download a set of leaves that are healthy, or that "

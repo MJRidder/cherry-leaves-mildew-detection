@@ -16,11 +16,14 @@ def leaves_visualizer_body():
         f"Provide the insights to visually differentiate a cherry leaf that "
         f"is healthy from one that contains powdery mildew.\n\n"
         )
+    
+    st.error(
+        f"This page provides answers to Business Requirement 1:\n"
+    )
 
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file] "
-        f"(https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")  # noqa
+        f"[Project README file](https://github.com/MJRidder/cherry-leaves-mildew-detection/blob/main/README.md).\n\n")  # noqa
 
     st.success(
         f"The first business requirement was to establish a "

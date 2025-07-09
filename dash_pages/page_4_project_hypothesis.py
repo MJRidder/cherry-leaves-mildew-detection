@@ -1,8 +1,13 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib.image import imread
+from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_project_hypothesis_body():
+    version = 'v1'
+
     st.write("### Project Hypothesis and Validation")
 
     st.success(
@@ -14,7 +19,9 @@ def page_project_hypothesis_body():
         f"review images and determine whether there are specific indicators "
         f"that can be viewed, determining if a leave is healthy or "
         f"containing powdery mildew.\n\n"
+        f"**This hypothesis links to Business Requirement 1.**"
         )
+    
     st.warning(
         f"This hypothesis can be considered validated. It is indeed possible "
         f"to use visual cues to indicate whether a cherry leave is healthy "
@@ -31,6 +38,18 @@ def page_project_hypothesis_body():
         f"for training ML models."
     )
 
+    healthy = plt.imread(
+        f"images/readme/readme-images-cherry-leaves-healthy.png")
+    infected = plt.imread(
+        f"images/readme/readme-images-cherry-leaves-powdery-mildew.png")
+
+    st.image(
+        healthy, caption='Healthy leaf - Average and Variability')
+    st.image(
+        infected, caption='Leaf with powdery mildew - Average and Variability')
+    
+    st.write("---")
+
     st.success(
         f"**Hypothesis 2:**\n\n"
         f"Based on visible indicators, it can be predicted with a 97% "
@@ -39,13 +58,21 @@ def page_project_hypothesis_body():
         f"*Valitation:*\n"
         f"A CNN model will be trained, tested and used on a validation set "
         f"of images to determine if this is possible.\n\n"
+        f"**This hypothesis links to Business Requirement 2.**"
         )
+
     st.warning(
         f"This hypothesis can be considered validated. The tool that was "
         f"created can predict, when using images of cherry leaves,  with a "
         f"degree of 99% accuracy whether the leave in the image is healthy "
         f"or if it was infected with the mildew fungus."
     )
+
+    st.write("*Generalised Performance on Test Set*")
+    st.dataframe(pd.DataFrame(
+        load_test_evaluation(version), index=['Loss', 'Accuracy']))
+
+    st.write("---")
 
     st.success(
         f"**Hypothesis 3:**\n\n"
