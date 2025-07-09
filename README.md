@@ -8,7 +8,7 @@ The cherry plantation crop from Farmy & Foods is facing a challenge where their 
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
 
-**Deployed version at can be found [here](https://cherry-leaves-mildew-detection.onrender.com/)**
+**Deployed version can be found [here](https://cherry-leaves-mildew-detection.onrender.com/)**
 
 # Table of Contents
 
@@ -25,18 +25,12 @@ To save time in this process, the IT team suggested an ML system that detects in
   - [Dashboard design](#dashboard-design)
   - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
-    - [deploy on Render](#deploy-on-render)
-    - [Forking the Repository](#forking-the-repository)
-    - [Making a local clone](#making-a-local-clone)
   - [Technologies used](#technologies-used)
-    - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
     - [PEP8 Python code validation](#pep8-python-code-validation)
   - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-    - [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -280,7 +274,7 @@ This would still need to be reviewed and fixed before it can be made fully avail
 
 ## Deployment
 
-### deploy on Render
+**Deploy on Render**
 
 - The App live link is: `https://cherry-leaves-mildew-detection.onrender.com/`
 - The project was deployed to Render using the following [Guide](https://code-institute-students.github.io/deployment-docs/42-pp5-pa/) .
@@ -312,7 +306,7 @@ This would still need to be reviewed and fixed before it can be made fully avail
 17. Open the deployed site via the link below the WEB SERVICE name
 18. Run your program to check that it all works as expected. Render can be slow for Predictive Analytics projects, so be patient
 
-### Forking the Repository
+**Forking the Repository**
 
 - Below are the steps to fork the repository:
   - Locate the GitHub Repository of this project and log into your GitHub account.
@@ -320,7 +314,7 @@ This would still need to be reviewed and fixed before it can be made fully avail
   - Then locate 'Create Fork' below the page and click on it.
   - You now have a copy of the original repository in your GitHub account.
 
-### Making a local clone
+**Making a local clone**
 
 - Below are the steps to clone a repository:
   - On the page for the repository, click the 'Code' button
@@ -342,7 +336,7 @@ This would still need to be reviewed and fixed before it can be made fully avail
 
 [Back to top ⇧](#table-of-contents)
 
-### Main Data Analysis and Machine Learning Libraries
+## Main Data Analysis and Machine Learning Libraries
 
 | Libraries | Use
 | --- | ---
@@ -449,7 +443,7 @@ Reviewed all .py pages for [PEP8](https://pep8ci.herokuapp.com/), all pages are 
 
 - The template used for this project belongs to CodeInstitute (CI) - [GitHub](https://github.com/Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves)
 - The CI Malaria Walkthrough project, for providing the step by step template for data collection, visualization and modeling. For also providing a clear overview of the type of files/folders required.
-- The following Github users, creating similar deeplearning projects with which I could compare notes with on structure, input, phrasing and document layout.
+- The following Github users and relevant projects, creating similar deeplearning projects with which I could compare notes with on structure, input, phrasing and document layout.
   - HughKeenan : [Cherry-Picker](https://github.com/HughKeenan/CherryPicker)
   - jfpaliga : [CVD-predictor](https://github.com/jfpaliga/CVD-predictor)
   - ocassidydev : [mushroom-safety](https://github.com/ocassidydev/mushroom-safety)
@@ -458,22 +452,22 @@ Reviewed all .py pages for [PEP8](https://pep8ci.herokuapp.com/), all pages are 
 
 [Back to top ⇧](#table-of-contents)
 
-### Content
+**Content**
 
 - The Leaves dataset was hosted and downloaded by Kaggle.
 - The Business case itself was creaed by Code Institute.
 
 [Back to top ⇧](#table-of-contents)
 
-### Media
+**Media**
 
 - The banner image was downloaded from the University of California Agriculture and Natural Resources website
 
 [Back to top ⇧](#table-of-contents)
 
-### Acknowledgements
+**Acknowledgements**
 
-- Mohammed Shami : mentor for this project
-- Roman Rakic and the CI support team : providing answers when I was stuck and Google & ChatGPT were not able to provide an answer
+- Mohammed Shami : mentor for this project, for providing guidance and helping me create the confidence to complete this project in the required time.
+- Roman Rakic and the CI support team : providing answers when I was stuck and Google & ChatGPT were not able to provide an answer.
 
 [Back to top ⇧](#table-of-contents)
